@@ -17,4 +17,9 @@ public class Circulo {
     public Double calcularArea(){
         return  3.14 * (raio * raio) ;
     }
+
+
+    public Double getRaio(){
+        return this.raio;
+    }
 }
