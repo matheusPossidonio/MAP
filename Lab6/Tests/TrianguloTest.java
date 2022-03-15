@@ -5,16 +5,39 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TrianguloTest {
 
+
+
+    @Test
+    void testaIsoscelesDoisLadosIguais() throws Exception{
+
+        Assertions.assertThrows(Exception.class, () -> {
+            Triangulo teste = Triangulo.getIstanceIsosceles(18, 20, 31);
+
+
+        },"Triangulo Não Isosceles");
+    }
+
+    @Test
+    void testaEquilateroIgual() throws Exception{
+
+        Assertions.assertThrows(Exception.class, () -> {
+            Triangulo teste = Triangulo.getIstanceEquilatero(18, 18, 31);
+
+
+        },"Triangulo não Equilatero");
+    }
+
+
     @Test
     void getIstanceIsosceles() throws Exception {
-        Triangulo triangulo = Triangulo.getIstanceIsosceles(10,10,10);
-        assertEquals(30.0,triangulo.calcularAreaIsosceles());
+        Triangulo teste = Triangulo.getIstanceIsosceles(20, 20, 31);
+        assertEquals(195.90798222635036,teste.calcularAreaIsosceles());
     }
 
     @Test
     void calcularAreaIsosceles() throws Exception {
-        Triangulo triangulo = Triangulo.getIstanceIsosceles(10,10,10);
-        assertEquals(30.0,triangulo.calcularAreaIsosceles());
+        Triangulo teste = Triangulo.getIstanceIsosceles(20, 20, 31);
+        assertEquals(195.90798222635036,teste.calcularAreaIsosceles());
     }
 
     @Test
@@ -25,21 +48,18 @@ class TrianguloTest {
 
 
         });
-
-
-
     }
 
     @Test
     void calcularAreaRetangulo() throws Exception {
         Triangulo teste3 = Triangulo.getIstanceRetangulo(17, 20, 25);
-        assertEquals(62.0,teste3.calcularAreaRetangulo());
+        assertEquals(27.0,teste3.calcularAreaRetangulo());
     }
 
     @Test
     void calcularAreaEquilatero() throws Exception {
-        Triangulo testeEquilatero = Triangulo.getIstanceEquilatero(15, 20, 25);
-        assertEquals(60.0,testeEquilatero.calcularAreaEquilatero());
+        Triangulo testeEquilatero = Triangulo.getIstanceEquilatero(15, 15, 15);
+        assertEquals(97.42785792574934,testeEquilatero.calcularAreaEquilatero());
     }
 
     @Test

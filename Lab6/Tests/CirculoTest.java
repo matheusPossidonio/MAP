@@ -3,12 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CirculoTest {
 
 
-    @org.junit.jupiter.api.Test
-    void getInstance() {
-        Circulo circulo1 = Circulo.getInstance( 9.0);
-        assertEquals(9.0,circulo1.getRaio());
 
-    }
 
     @org.junit.jupiter.api.Test
     void calcularArea() {
