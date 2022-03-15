@@ -2,10 +2,10 @@
 public class Main {
     public static void main(String[] args) throws Exception{
 
-        Triangulo teste = Triangulo.getIstanceIsosceles(10, 10, 10);
+        Triangulo teste = Triangulo.getIstanceIsosceles(20, 20, 31);
         System.out.println("valor = "+ teste.calcularAreaIsosceles());
 
-        Triangulo teste2 = Triangulo.getIstanceEquilatero(15, 20, 25);
+        Triangulo teste2 = Triangulo.getIstanceEquilatero(10,10, 10);
         System.out.println("valor = "+ teste2.calcularAreaEquilatero());
 
         Triangulo teste3 = Triangulo.getIstanceRetangulo(17, 20, 25);
